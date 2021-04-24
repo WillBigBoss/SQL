@@ -1,0 +1,56 @@
+SQL (Structured Query Language) é a linguagem padrão em sistemas de gerenciadores de bancos de dados relacionais. 
+É por meio dela que criamos tabelas, colunas, índices, garantimos e removemos privilégios a usuários e, principalmente, consultamos os dados armazenados em tabelas.
+
+
+ Os comandos da linguagem SQL são divididos em conjuntos e essa separação é feita de acordo com o que cada comando faz. Comandos que fazem atividades similares são agrupados no mesmo conjunto.
+ 
+		DDL - Data Definition Language - Conjunto de comandos que lidam com os objetos, criando bancos de dados, esquemas, tabelas, campos, etc. Dentre os mais utilizados temos CREATE, ALTER e DROP. 
+		
+		Exemplo:
+				CREATE TABLE produto -- Criação da tabela produto
+		-----------------------------------------------------------------------------
+		DML - Data Manipulation Language - Os comandos aqui lidam com os dados. Alguns muito comuns são INSERT, UPDATE e DELETE.
+		
+		Exemplo:
+				INSERT INTO produto (nome, valor) VALUES (‘geladeira’,’1200’)
+				-- Inserção de valores na tabela produto
+		-----------------------------------------------------------------------------
+		DQL - Data Query Language - Linguagem de consulta de dados conta com o conjunto da instrução utilizada para a obtenção dos registros dos bancos de dados.
+		
+		Exemplo:
+				SELECT nome, valor FROM produto -- Recupera valores da tabela produto
+				
+		-----------------------------------------------------------------------------
+		DTL - Data Transaction Language - Linguagem de transação de dados que conta com o conjunto de instruções usadas para gerenciar as transações que ocorrem dentro do banco de dados. 
+		
+		Exemplo:
+				BEGIN TRAN -- Inicia uma transação
+		
+		-----------------------------------------------------------------------------
+				
+		DCL - Data Control Language - Linguagem de controle de dados possui o conjunto das instruções usadas para controlar o acesso e gerenciar permissões de usuários no banco de dados. 
+		
+		Exemplo:
+				
+				GRANT CREATE TABLE to usuario -- Concede privilégio de criar tabela a um usuário
+		-----------------------------------------------------------------------------
+		
+		
+		ORM (Object Relational Mapper) é uma técnica de mapeamento objeto relacional que permite fazer uma relação dos objetos com os dados que os mesmos representam. 
+		Ele faz o mapeamento da sua classe para o banco de dados e cada ORM tem suas particularidades para gerar o SQL referente a inserção do objeto que corresponde a uma tabela no banco de dados e realizar a operação. Utilizando um ORM, também se ganha produtividade, pois deixa-se de escrever os comando SQL para deixar que o próprio ORM, faça isto por você.
+		
+		-----------------------------------------------------------------------------
+		
+
+		SQL: INSERT
+		O INSERT é responsável pela inserção de uma ou mais linhas em uma tabela, além de permitir que as colunas de destino sejam informadas em qualquer ordem em que forem declaradas.
+		
+					INSERT INTO
+					[ nome-tabela ]
+					([ coluna1, coluna2, … ])
+
+					VALUES
+					([ valor-coluna1, valor-coluna2, … ])
+		
+		
+		-----------------------------------------------------------------------------

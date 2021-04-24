@@ -1,0 +1,71 @@
+DML/DQL
+Os principais comandos agrupados em DML e DQL são:
+
+INSERT
+DELETE
+UPDATE
+SELECT
+
+Podemos inserir registros numa tabela por meio do comando INSERT. Nele, informamos as colunas que queremos inserir os dados, e os valores que queremos preencher nesses campos da tabela.
+
+			INSERT INTO Cliente(nome, telefone)
+			VALUES ('Suzana', '99999-9999')
+			
+			Código 5. Inserindo dados da tabela
+			
+Para a exclusão de registros temos o comando DELETE, que pode ser usado em junção com a cláusula WHERE. Caso essa condição não esteja presente, todos os dados da tabela serão apagados.
+
+			DELETE FROM Cliente WHERE id = 2 
+			-- Excluirá apenas o registro com id igual a 2
+			
+			DELETE FROM Cliente 
+			-- Excluirá todos os registros
+			
+			Código 6. Deletando dados da tabela
+			
+Além de excluir dados, temos casos em que será necessário atualizar valores na tabela. E para isso temos o comando UPDATE que também pode ser usado com a cláusula WHERE. Da mesma forma como acontece com o comando DELETE, se a condição não for usada, todos os dados da tabela serão atualizados.
+
+			UPDATE Cliente SET telefone = '99999-9999' WHERE id = 3
+			-- Atualizará o telefone do cliente com id = 3
+
+			UPDATE Cliente SET telefone = '99999-9999'
+			-- Atualizará o telefone de todos os cliente
+  
+			Código 7. Atualizando dados da tabela
+			
+
+  
+  
+ Abaixo temos o uso do comando SELECT, com o qual recuperamos informações de uma tabela. No Código 8 estamos recuperando as informações nome e telefone da tabela Cliente.
+
+			SELECT nome, telefone FROM Cliente
+			
+			Código 8. Selecionando dados da tabela
+			
+Com o comando SELECT podemos obter os dados das tabelas que serão selecionados de acordo com a consulta que estamos fazendo. Devemos indicar neste comando a tabela que queremos recuperar os dados, se há alguma condição para os registros serem recuperados, ou se queremos limitar a quantidade de linhas para ser retornada etc.
+
+			SELECT nome, telefone
+			FROM Cliente
+			WHERE nome = 'Ramon'
+			
+			Código 9. Delimitando a recuperação de dados
+			
+A instrução acima recupera dados de uma tabela com uma condição especificada. O termo SELECT é usado para informar qual o campo deve ser recuperado. Após ele, pode ser colocado um ou mais campos que se deseja obter. Em seguida temos o uso do termo FROM, com o qual indicamos de qual tabela os dados serão obtidos, tendo na sequência o nome da tabela em que faremos essa operação. Por fim, usamos o WHERE para definir uma condição para a obtenção dos dados, que no caso acima define que o campo nome seja igual a “Ramon”.
+ 
+
+Um recurso que é usado com frequência é a junção de duas ou mais tabelas. E isso é feito por meio da instrução JOIN. 
+
+			SELECT c.nome, c.telefone, p.codigo, p.data_pedido
+			FROM Cliente c
+			JOIN Pedido p
+			ON c.id = p.id_cliente
+			WHERE c.id = 5
+			
+			Código 10. Juntando dados de duas tabelas
+			  
+  
+  
+  
+  
+  
+  

@@ -1,0 +1,9 @@
+O comando DELETE no SQL permite que uma ou mais linhas sejam excluídas de uma tabela do banco de dados.
+
+				Sintaxe
+				DELETE FROM
+						[ tabela ]
+						WHERE
+						[ condicao_de_busca ];
+						
+

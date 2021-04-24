@@ -1,0 +1,46 @@
+DDL
+Agora veremos alguns comandos do grupo DDL com exemplos de códigos. Nesse momento não é necessário se preocupar em entender completamente cada comando, pois em próximos conteúdos abordaremos cada um deles em mais detalhes.
+
+Os principais comandos agrupados em DDL são:
+
+CREATE TABLE
+DROP TABLE
+ALTER TABLE
+TRUNCATE
+
+No Código 1, podemos ver o uso do comando CREATE TABLE.
+
+			CREATE TABLE Contato (
+				Id int,
+				Nome varchar(255),
+				Telefone varchar(11)
+			);
+Código 1. Criação de tabela
+
+Além da criação de tabelas, podemos também excluí-las. E isso pode ser feito com o uso do comando DROP, que vemos no Código 2.
+
+			DROP TABLE Contato
+
+
+Código 2. Exclusão de tabela
+
+Com a execução do código acima, excluiremos a tabela Contato. O comando DROP TABLE serve para remover uma tabela existente de um banco de dados.
+
+O comando DROP TABLE remove a tabela e todos os dados contidos nela, então deve ser usado com cautela.
+Uma tabela também pode ter sua estrutura alterada. Isso é feito por meio do comando ALTER TABLE. No Código 3, temos um exemplo no qual adicionamos uma coluna à tabela Contato.
+
+			ALTER TABLE Contato
+			Add email VARCHAR(255)
+			
+Código 3. Alteração de tabela
+
+
+Mais um comando DDL é o comando TRUNCATE. Com ele, excluímos todos os registros de uma tabela, deixando-a do jeito como foi criada. No Código 4, temos o uso desse comando.
+
+			TRUNCATE TABLE Contato
+			
+Código 4. Remoção dos dados da tabela
+
+
+Acima, temos a criação de uma tabela no SQL. O comando CREATE TABLE cria uma tabela, que no nosso exemplo, terá o nome Contato. A estrutura interna da tabela é inserida dentro dos parênteses, onde vamos colocar as colunas com as suas propriedades. Nesse caso criamos três colunas, cada uma com um nome e com o seu tipo.
+

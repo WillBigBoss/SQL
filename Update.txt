@@ -1,0 +1,29 @@
+Considere a tabela produtos presente na Tabela 1, onde precisamos modificar o nome do produto com id=2, por ter sido inserido com erros de ortografia.
+
+
+					id|	descricao					|preco	|categoria
+					1 |	Papel oficio (c/100 folhas)	|4.50	|2
+					2 |	Laapis preto (unid)	0.50	|1		|
+					3 |	Xerox (1 folha PB)	0.25	|4		|
+					
+					Tabela 1. Tabela produtos
+
+Para resolver esta falha de escrita podemos executar o comando SQL a seguir:
+
+					UPDATE
+					  produtos
+					SET
+					  descrição = 'Lápis preto (unid)'
+					WHERE
+					  id = 2
+Na linha 2 especificamos a tabela que sofrerá alterações. Em seguida, na linha 4 especificamos os valores que sofrerão as mudanças, ou seja, { Lápis preto (unid) } e definimos ainda um novo valor para o produto. Em seguida utilizamos a condição WHERE para especificar o item que será modificado através do filtro {id = 2}.
+
+					Sintaxe
+					UPDATE [ tabela ]
+					SET
+					  [ coluna_1 ] = [ novo_valor_1 ],
+					  [ coluna_2 ] = [ novo_valor_2 ]
+					WHERE
+					  [ condicao-de-busca ]
+					ORDER [ ordem ]
+					LIMIT [ limite ];

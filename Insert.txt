@@ -1,0 +1,35 @@
+
+		SQL: INSERT
+		O INSERT é responsável pela inserção de uma ou mais linhas em uma tabela, além de permitir que as colunas de destino sejam informadas em qualquer ordem em que forem declaradas.
+		
+					INSERT INTO
+					[ nome-tabela ]
+					([ coluna1, coluna2, … ])
+
+					VALUES
+					([ valor-coluna1, valor-coluna2, … ])
+		
+
+
+		A inclusão de dados pode ainda ser feita a partir de comando de SELECT, e como vantagem desse recurso podemos facilmente migrar dados de uma tabela para outra, como mostra o seguinte exemplo de utilização:
+
+					INSERT INTO produtos
+						(id, descricao, preco, categoria)
+							(SELECT id, descricao, preco, categoria FROM produtos WHERE id = 1)
+
+
+
+		Podemos também fazer a inserção dos dados sem informar o nome das colunas: basta seguir a ordem em que as colunas da tabela foram criadas. Podemos ver melhor como esse tipo de comando e feito a partir do exemplo abaixo:
+
+					INSERT INTO produtos
+					 VALUES
+					  (4, 'Resma Ofício c/500 folhas', 17.50, 2);
+					  
+					  
+		Podemos também utiliar a sintaxe completa do comando insert, veja abaixo:
+
+					INSERT INTO produtos (id, descricao, preco, categoria)
+					 VALUES
+					  (4, 'Resma Ofício c/500 folhas', 17.50, 2);
+					  
+					  
